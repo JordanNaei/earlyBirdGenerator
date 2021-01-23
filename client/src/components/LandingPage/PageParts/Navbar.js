@@ -1,6 +1,8 @@
 import React from "react";
 import "./landingPagestyle.css";
-import SideMenu from "./sidemenu/SideMenu";
+import SideMenu from "../BurgerMenu/sidemenu/SideMenu";
+
+
 
 
 // import {
