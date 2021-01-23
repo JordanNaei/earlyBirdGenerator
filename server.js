@@ -1,7 +1,7 @@
 var express = require("express"),
     mongoose = require("mongoose"),
     passport = require("passport"),
-    session = require("express-session");
+    session = require("express-session"),
     User = require('./models/user');
 
 const PORT = process.env.PORT || 3002;
