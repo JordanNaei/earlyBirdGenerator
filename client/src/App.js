@@ -6,7 +6,6 @@ import Header from "./components/LandingPage/Header";
 import Section from "./components/LandingPage/Section";
 import SideDrawer from "./components/LandingPage/sidemenu/SideDrawer";
 import BackDrop from "./components/LandingPage/backdrop/BackDrop";
-import DividerPage from "./components/Divider/Divider"
 
 class App extends Component {
    state = {
