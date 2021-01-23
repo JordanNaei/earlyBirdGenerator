@@ -1,0 +1,49 @@
+body {
+  background-color: #0e49b5 !important;
+  color: white !important;
+}
+
+.yandal3 {
+  margin: auto !important;
+  border-radius: 10px !important;
+  background-color: #ec0101 !important;
+  margin-bottom: 20px !important;
+}
+
+.yandal1 {
+  margin: auto !important;
+}
+
+.yandal {
+  margin: auto auto !important;
+  align-content: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  border-radius: 30px;
+  background-color: #ec0101;
+}
+
+.yandal4 {
+  padding: 10px !important;
+  margin-bottom: 20px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  text-align: center;
+  background: url("../imges/flames.jpg") repeat-x;
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  background-size:cover;
+  animation:fire 2s linear infinite;
+}
+
+@keyframes fire {
+    /* 0%{
+        background-position: left 0 top 20px;
+    } */
+    50%{
+        background-position: left 10px top 5px;
+    }
+    100%{
+        background-position: left -10px top 0px;
+    }
+}

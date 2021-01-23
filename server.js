@@ -1,19 +1,40 @@
-const express = require("express");
-const path = require("path");
-const PORT = process.env.PORT || 3001;
-const app = express();
+var express = require("express"),
+    mongoose = require("mongoose"),
+    passport = require("passport"),
+    session = require("express-session");
+    User = require('./models/user');
 
-// Serve up static assets (usually on heroku)
+const PORT = process.env.PORT || 3002;
+mongoose.connect("mongodb://localhost:27017/auth_demo_app", { useNewUrlParser: true, useUnifiedTopology: true });
+var app = express();
+app.use(express.json());
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.use(express.static("client/public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(session({
+  secret: "I'm a master",
+  resave: false,
+  saveUninitialized: false
+}));
 
-app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+const LocalStrategy = require('passport-local').Strategy;
+passport.use(new LocalStrategy(User.authenticate()));
+
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
+
+app.listen(PORT, function () {
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
