@@ -1,0 +1,151 @@
+.navbar {
+  background: silver;
+  height: 20%;
+  padding: 5px;
+}
+
+.navbar a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 5px;
+  line-height: 3;
+  text-align: center;
+  justify-content: center;
+}
+
+.header {
+  background: white;
+  height: 15rem;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  padding-top: 5px;
+  text-align: center;
+  color: navy;
+  font-size: auto;
+}
+
+@media (max-width: 550px) {
+  .header {
+    font-size: 75%;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .jumbotron {
+    font-size: 75%;
+    line-height: 1rem;
+  }
+}
+
+.section {
+  background: lightgrey;
+  padding: 50px;
+  text-align: center;
+  display: block;
+}
+
+.section h2 {
+  align-items: center;
+}
+
+@media (max-width: 550px) {
+  .section {
+    font-size: 75%;
+    line-height: 1rem;
+  }
+}
+
+/* Tie to Login button above
+ const NavBar = props => {
+   if (props.isAuth !== null) {
+     return <span>Logged in</span>;
+   } else {
+     return <span><a href="/Login">Not logged in</a></span>;
+   }
+ }; */
+
+.navbar {
+  background: silver;
+  height: 20%;
+  padding: 5px;
+}
+
+.navbar a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 5px;
+  line-height: 3;
+  text-align: center;
+  justify-content: center;
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(70, 111, 161);
+  height: 56px;
+}
+
+.toolbar_navigator {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.toolbar_logo {
+  margin-left: 1rem;
+}
+
+.toolbar_logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar_navigation-items ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.toolbar_navigation-items li {
+  padding: 0 0.5rem;
+}
+
+.toolbar_navigation-items a {
+  color: white;
+  text-decoration: none;
+}
+
+.toolbar_navigation-items a:hover, .toolbar_navigation-items a:active {
+  color: rgb(223, 75, 30);
+}
+
+@media screen and (max-width: 760px) {
+  .toolbar_navigation-items {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 759px) {
+  .toggle-btn {
+    display: none;
+  }
+  .toolbar_logo {
+    margin-left: 0;
+  }
+}
