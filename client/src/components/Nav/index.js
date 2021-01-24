@@ -7,13 +7,14 @@ function Nav() {
   const [store] = useStoreContext();
 
   return (
-    <div className="container yan">
-      <ul className="nav justify-content-center yandal4">
-        <li className="nav-item">
-          <a className="nav-link" href="#"><h1 className=""><b>Early Bird Generator</b></h1></a>
-        </li>
-      </ul>
-    </div>
+    <nav className="navbar navbar-dark  bg-transparent">
+      <div className="container-fluid justify-content-center">
+        <a class="navbar-brand" href="/">
+          <h1 className="titl">Early Bird Generator</h1>
+        </a>
+      </div>
+      {store.loading ? <a className="navbar-brand ml-auto">Loading...</a> : ""}
+    </nav>
 
   );
 }
