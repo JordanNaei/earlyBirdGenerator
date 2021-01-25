@@ -38,8 +38,7 @@ function PostsList() {
 
   return (
     <div>
-      <h1>Article Search Result</h1>
-      <h3 className="mb-5 mt-5">Click on Article To Get The Summary</h3>
+      <h1 className= "text-center">Search Result</h1>
       {state.posts.length ? (
         <List>
           {state.posts.map(post => (
@@ -54,10 +53,10 @@ function PostsList() {
           ))}
         </List>
       ) : (
-        <h3>No Articles were searched!</h3>
+        <h3 className="text-center">No Articles were searched!</h3>
       )}
-      <div className="mt-5">
-        <Link to="favorites">View favorites</Link>
+      <div className="mt-5 text-right">
+        <Link to="favorites"><h3>View favorites</h3></Link>
       </div>
     </div>
   );

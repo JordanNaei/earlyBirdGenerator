@@ -1,6 +1,7 @@
 import React, { createContext, useReducer, useContext } from "react";
 import {
   SET_CURRENT_POST,
+  GET_ARTICLES,
   REMOVE_POST,
   UPDATE_POSTS,
   ADD_POST,
@@ -65,6 +66,13 @@ const reducer = (state, action) => {
         return post._id !== action._id; 
       })
     };
+    case GET_ARTICLES:
+      return {
+        ...state,
+        favorites: state.favorites.filter((post) => {
+          return post._id !== action._id; 
+        })
+      };
 
   case LOADING:
     return {
@@ -79,6 +87,7 @@ const reducer = (state, action) => {
 
 const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
+    searchTermInput: "",
     posts: [],
     currentPost: {
       _id: 0,
