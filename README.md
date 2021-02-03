@@ -1,4 +1,4 @@
-# Budget Tracker
+# Early Bird Generator
 
 Repository: https://github.com/JordanNaei/earlyBirdGenerator
 URL: https://secret-wave-97247.herokuapp.com/
